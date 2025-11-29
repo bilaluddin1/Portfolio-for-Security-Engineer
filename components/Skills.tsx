@@ -12,13 +12,12 @@ export const Skills: React.FC = () => {
           <span>SKILL_MATRIX</span>
         </h2>
         <p className="text-gray-400 leading-relaxed">
-          My expertise spans the full spectrum of information security. From rigorous penetration testing
-          and red team engagements to architecting blue team defensive strategies. I focus on automation
-          to scale security efforts and "shift left" in the development lifecycle.
+          My expertise spans AppSec, Cloud Security, and DevSecOps. I focus on automating workflows, 
+          hardening containerized applications, and enforcing least privilege to eliminate risks.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-          {['CISSP Certified', 'OSCP Certified', 'AWS Security Specialty', 'Certified Ethical Hacker'].map((cert) => (
+          {['ISC2 Certified in Cyber Security', 'Microsoft Certified Trainer', 'Azure Administrator', 'Ignite Hackathon Winner'].map((cert) => (
             <div key={cert} className="flex items-center gap-2 text-sm font-mono text-gray-300 border border-gray-800 p-3 rounded bg-gray-900/50">
               <div className="w-2 h-2 bg-cyber-green rounded-full"></div>
               {cert}

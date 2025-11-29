@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Twitter, Key } from 'lucide-react';
+import { Mail, Linkedin, Github, Award } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   return (
@@ -8,33 +8,41 @@ export const Contact: React.FC = () => {
         Ready to <span className="text-cyber-neon">Secure</span> Your Infrastructure?
       </h2>
       <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-        I am currently open to new opportunities, consulting engagements, or interesting collaborations. 
-        Send an encrypted signal my way.
+        I am currently open to new opportunities in Security Engineering, DevSecOps, and Cloud Security. 
+        Reach out to discuss how I can help secure your organization.
       </p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-6">
-        <a href="mailto:contact@example.com" className="inline-flex items-center justify-center px-6 py-3 border border-gray-700 rounded hover:bg-white hover:text-black transition-all duration-300 group">
+        <a href="mailto:bilaluddin_core@outlook.com" className="inline-flex items-center justify-center px-6 py-3 border border-gray-700 rounded hover:bg-white hover:text-black transition-all duration-300 group">
           <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-          <span>Send Email</span>
+          <span>bilaluddin_core@outlook.com</span>
         </a>
         <a href="#" className="inline-flex items-center justify-center px-6 py-3 border border-gray-700 rounded hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all duration-300">
           <Linkedin className="w-5 h-5 mr-2" />
-          <span>LinkedIn</span>
+          <span>Bilal.Uddin</span>
         </a>
-         <a href="#" className="inline-flex items-center justify-center px-6 py-3 border border-gray-700 rounded hover:bg-[#1DA1F2] hover:border-[#1DA1F2] hover:text-white transition-all duration-300">
-          <Twitter className="w-5 h-5 mr-2" />
-          <span>Twitter</span>
+         <a href="#" className="inline-flex items-center justify-center px-6 py-3 border border-gray-700 rounded hover:bg-[#333] hover:border-[#333] hover:text-white transition-all duration-300">
+          <Github className="w-5 h-5 mr-2" />
+          <span>Bilal.Uddin</span>
         </a>
       </div>
 
       <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col items-center">
-        <div className="flex items-center gap-2 text-gray-500 font-mono text-sm mb-2">
-            <Key className="w-4 h-4" />
-            <span>PGP FINGERPRINT</span>
+        <div className="flex items-center gap-2 text-gray-500 font-mono text-sm mb-4">
+            <Award className="w-4 h-4" />
+            <span>VERIFIED CERTIFICATIONS</span>
         </div>
-        <code className="bg-black/50 px-4 py-2 rounded text-xs text-cyber-green font-mono break-all max-w-full">
-            8F3A 2B1C 4D5E 6F7G 8H9I 0J1K 2L3M 4N5O
-        </code>
+        <div className="flex flex-wrap justify-center gap-2">
+            <span className="bg-black/50 px-3 py-1 rounded text-xs text-cyber-green font-mono border border-cyber-green/30">
+                Certified in Cyber Security (ISC2)
+            </span>
+             <span className="bg-black/50 px-3 py-1 rounded text-xs text-cyber-green font-mono border border-cyber-green/30">
+                Microsoft Certified Trainer (MCT)
+            </span>
+             <span className="bg-black/50 px-3 py-1 rounded text-xs text-cyber-green font-mono border border-cyber-green/30">
+                Azure Administrator
+            </span>
+        </div>
       </div>
     </div>
   );

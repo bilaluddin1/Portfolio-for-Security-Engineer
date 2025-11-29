@@ -33,7 +33,7 @@ export const Hero: React.FC = () => {
       </div>
 
       <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-        Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-neon to-blue-500">Alex Sentinel</span>
+        Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-neon to-blue-500">Bilal Uddin</span>
       </h1>
 
       <div className="h-12 flex items-center justify-center">
@@ -44,8 +44,8 @@ export const Hero: React.FC = () => {
       </div>
 
       <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-        Securing digital frontiers through offensive security and robust architecture.
-        Specializing in cloud infrastructure, penetration testing, and automated defense systems.
+        Security Engineer with expertise in AppSec, Cloud Security, and DevSecOps. 
+        Skilled at automating workflows and embedding security into CI/CD pipelines to drive a secure development culture.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 pt-8">

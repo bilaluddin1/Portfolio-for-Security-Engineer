@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Shield, Lock, Fingerprint } from 'lucide-react';
+import { User, Shield, Lock, Fingerprint, Cloud, Code } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
@@ -16,16 +16,16 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-2 space-y-4 text-gray-300">
                 <p>
-                    I am a security practitioner obsessed with understanding how systems break to make them unbreakable. 
-                    With over 6 years of experience in the field, I have transitioned from traditional network administration 
-                    to specialized roles in offensive security and cloud architecture.
+                    I am a Security Engineer passionate about driving secure development culture and evolving into a strategic security leader.
+                    My work focuses on bridging the gap between DevOps and Security, ensuring that critical infrastructure is hardened without slowing down innovation.
                 </p>
                 <p>
-                    My philosophy is simple: <strong className="text-white">Security must be an enabler, not a blocker.</strong> 
-                    I build tools that integrate seamlessly into developer workflows, ensuring that safety is the path of least resistance.
+                    With a strong foundation in <strong className="text-white">Java/Kotlin microservices</strong> and <strong className="text-white">Cloud Security</strong>, 
+                    I specialize in automating vulnerability management and securing the SDLC.
                 </p>
                 <p>
-                    When I'm not auditing code or designing IAM policies, I'm contributing to open-source security tools or participating in CTF competitions.
+                    Whether it's performing assessments with Burp Suite, managing AWS WAF rules, or deploying Kubernetes security contexts, 
+                    I strive to reduce risk and improve system resilience.
                 </p>
             </div>
 
@@ -33,22 +33,22 @@ export const About: React.FC = () => {
                 <div className="p-4 bg-black/40 rounded border border-gray-700 flex items-start gap-4">
                     <Shield className="w-6 h-6 text-cyber-green shrink-0 mt-1" />
                     <div>
-                        <h4 className="font-bold text-white">Defensive</h4>
-                        <p className="text-sm text-gray-400">SIEM Implementation, Incident Response, Hardening</p>
+                        <h4 className="font-bold text-white">AppSec</h4>
+                        <p className="text-sm text-gray-400">OWASP, Burp Suite, MOBSF, Frida, Android Studio</p>
                     </div>
                 </div>
                 <div className="p-4 bg-black/40 rounded border border-gray-700 flex items-start gap-4">
-                    <Lock className="w-6 h-6 text-cyber-neon shrink-0 mt-1" />
+                    <Cloud className="w-6 h-6 text-cyber-neon shrink-0 mt-1" />
                     <div>
-                        <h4 className="font-bold text-white">Offensive</h4>
-                        <p className="text-sm text-gray-400">Penetration Testing, Red Teaming, Exploit Dev</p>
+                        <h4 className="font-bold text-white">Cloud Security</h4>
+                        <p className="text-sm text-gray-400">AWS, Terraform, Kubernetes, Docker, Falco, IAM</p>
                     </div>
                 </div>
                 <div className="p-4 bg-black/40 rounded border border-gray-700 flex items-start gap-4">
-                    <Fingerprint className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
+                    <Code className="w-6 h-6 text-purple-500 shrink-0 mt-1" />
                     <div>
-                        <h4 className="font-bold text-white">Forensics</h4>
-                        <p className="text-sm text-gray-400">Malware Analysis, Digital Forensics, Recovery</p>
+                        <h4 className="font-bold text-white">Automation</h4>
+                        <p className="text-sm text-gray-400">Python, Bash, Java, n8n, Semgrep, Trivy</p>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
-import { EXPERIENCE, PROJECTS, SKILLS_DATA } from '../constants';
+import { EXPERIENCE, PROJECTS, SKILLS_DATA, SERVICES } from '../constants';
 
 const SYSTEM_PROMPT = `
-You are "SentinelBot", an AI assistant living in the portfolio website of a Senior Security Engineer.
-Your goal is to answer questions about the engineer's skills, experience, and projects based on the context provided below.
+You are "SentinelBot", an AI assistant living in the portfolio website of Bilal Uddin, a Security Engineer.
+Your goal is to answer questions about Bilal's skills, experience, and projects based on the context provided below.
 You should adopt a "cybersecurity expert" persona: concise, technical, slightly futuristic but professional.
 If asked about topics outside of security, technology, or this portfolio, politely decline with a "Access Denied" thematic message.
 
@@ -11,11 +11,13 @@ CONTEXT:
 Experience: ${JSON.stringify(EXPERIENCE)}
 Projects: ${JSON.stringify(PROJECTS)}
 Top Skills: ${JSON.stringify(SKILLS_DATA)}
+Services Offered: ${JSON.stringify(SERVICES)}
 
 Key attributes:
-- Expert in Cloud Security and AppSec.
-- Loves Python and Go.
-- Believes in "Shift Left" security.
+- Expert in AppSec, Cloud Security (AWS/Kubernetes), and DevSecOps.
+- Skilled in Python, Bash, Java.
+- Focuses on automation (Prowler, DefectDojo, Wazuh).
+- Certified in Cyber Security (ISC2) and Azure Administrator.
 
 Keep responses under 100 words unless detailed technical explanation is requested.
 `;
@@ -29,32 +31,6 @@ export const sendMessageToGemini = async (history: { role: string; content: stri
 
     const ai = new GoogleGenAI({ apiKey });
     
-    // Format history for the API
-    // We are using a simple generateContent here for a single turn or stateless feel, 
-    // but to simulate chat we can just append the user message to the context.
-    // For a real chat object, we would use ai.chats.create, but here we'll just concatenate for simplicity 
-    // or use the chat helper if we want true state. Let's use Chat for better state management if the component held state.
-    // However, since the service function is stateless, let's create a chat with history.
-
-    const chat = ai.chats.create({
-      model: 'gemini-2.5-flash',
-      config: {
-        systemInstruction: SYSTEM_PROMPT,
-      }
-    });
-
-    // Replay history (excluding the very last message which is the new one, handled by sendMessage)
-    // Note: in a real app, you might want to persist the chat session object instead of recreating it.
-    // To keep it simple and robust for this demo, we will just pass the new message with the system prompt context 
-    // effectively "fresh" but we can try to replay if needed. 
-    // Actually, let's just use generateContent for single-turn Q&A style which is robust for portfolios,
-    // OR use the chat properly.
-    
-    // Let's use generateContent but include history in the prompt text for context if needed, 
-    // OR just rely on the system prompt context. 
-    // Since the user might ask follow ups, let's try to include the last few messages in the prompt or use chat.
-    
-    // Best approach for this stateless function signature:
     const historyContent = history.map(h => `${h.role === 'user' ? 'User' : 'SentinelBot'}: ${h.content}`).join('\n');
     const fullPrompt = `
     ${SYSTEM_PROMPT}

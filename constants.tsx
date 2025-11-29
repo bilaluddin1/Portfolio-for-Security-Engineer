@@ -4,50 +4,81 @@ import { Project, ExperienceItem } from './types';
 
 export const HERO_TITLES = [
   "Security Engineer",
-  "Penetration Tester",
+  "DevSecOps Specialist",
   "Cloud Security Architect",
-  "Threat Hunter"
+  "AppSec Researcher"
 ];
 
 export const SKILLS_DATA = [
-  { subject: 'NetSec', A: 95, fullMark: 100 },
   { subject: 'AppSec', A: 90, fullMark: 100 },
-  { subject: 'Cloud (AWS/GCP)', A: 85, fullMark: 100 },
-  { subject: 'Python/Go', A: 80, fullMark: 100 },
-  { subject: 'Forensics', A: 70, fullMark: 100 },
-  { subject: 'Cryptography', A: 75, fullMark: 100 },
+  { subject: 'Cloud Security', A: 95, fullMark: 100 },
+  { subject: 'DevSecOps', A: 85, fullMark: 100 },
+  { subject: 'Automation', A: 80, fullMark: 100 },
+  { subject: 'Container Sec', A: 85, fullMark: 100 },
+  { subject: 'Mobile Sec', A: 75, fullMark: 100 },
+];
+
+export const SERVICES = [
+  {
+    title: "Architecture Review",
+    description: "Comprehensive security assessment of system design and infrastructure to identify structural flaws before deployment. focusing on secure design principles.",
+    icon: "Network"
+  },
+  {
+    title: "Source Code Review",
+    description: "In-depth manual and automated analysis of source code (Java, Kotlin, Python) to detect logic errors, hardcoded secrets, and injection vulnerabilities.",
+    icon: "Code"
+  },
+  {
+    title: "Penetration Testing",
+    description: "Offensive security testing for Web Applications, Mobile Apps (Android/iOS), and APIs to simulate real-world attacks and uncover critical risks.",
+    icon: "Crosshair"
+  },
+  {
+    title: "Cloud Security",
+    description: "Hardening AWS/Kubernetes environments, IAM policy audits, configuration reviews, and implementing DevSecOps pipelines.",
+    icon: "Cloud"
+  },
+  {
+    title: "Threat Modeling",
+    description: "Proactive identification of potential attack vectors and security risks using STRIDE and other methodologies for critical features.",
+    icon: "Shield"
+  },
+  {
+    title: "Tooling Strategy",
+    description: "Expert recommendations on selecting and integrating the best security tools (SAST, DAST, SIEM, WAF) tailored to your specific technology stack.",
+    icon: "Settings"
+  }
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'VulnScanner Pro',
-    description: 'A custom automated vulnerability scanner built with Python and Go, specifically designed to detect misconfigured S3 buckets and exposed API keys in CI/CD pipelines.',
-    techStack: ['Python', 'Go', 'AWS SDK', 'Docker'],
+    title: 'Vuln Management Program',
+    description: 'Deployed a comprehensive vulnerability management program by integrating Prowler with DefectDojo to automate ingestion and triage of AWS misconfigurations, reducing reporting overhead by 50%.',
+    techStack: ['Prowler', 'DefectDojo', 'AWS', 'Python'],
     github: '#',
-    category: 'Tooling'
-  },
-  {
-    id: '2',
-    title: 'SecureMesh',
-    description: 'Zero-trust service mesh implementation using Istio and Kubernetes. Implemented mTLS and rigorous authorization policies for a microservices architecture.',
-    techStack: ['Kubernetes', 'Istio', 'Terraform', 'Azure'],
-    link: '#',
     category: 'Cloud'
   },
   {
+    id: '2',
+    title: 'Secure SDLC Pipeline',
+    description: 'Engineered a secure SDLC within the CI/CD pipeline by embedding Dependabot, Semgrep, and Trivy for automated scanning and custom policy enforcement, boosting scan accuracy by 70%.',
+    techStack: ['GitHub Actions', 'Semgrep', 'Trivy', 'Dependabot'],
+    category: 'Tooling'
+  },
+  {
     id: '3',
-    title: 'Bank Heist CTF',
-    description: 'Designed and deployed a Capture The Flag challenge focusing on advanced SQL injection and XSS vectors for a local security conference.',
-    techStack: ['Node.js', 'React', 'PostgreSQL', 'Kali Linux'],
-    github: '#',
-    category: 'AppSec'
+    title: 'K8s Hardening & Runtime Sec',
+    description: 'Hardened containerized applications by implementing Kubernetes security contexts, enforcing least privilege with RBAC, and deploying Falco for real-time runtime anomaly detection.',
+    techStack: ['Kubernetes', 'Kyverno', 'OPA', 'Falco'],
+    category: 'Cloud'
   },
   {
     id: '4',
-    title: 'LogSentinel',
-    description: 'Real-time SIEM dashboard integrating with ElasticSearch to visualize and alert on anomalous login patterns using Machine Learning.',
-    techStack: ['ELK Stack', 'Python', 'React', 'TensorFlow'],
+    title: 'Wazuh SIEM Deployment',
+    description: 'Increased incident response speed by 40% and improved Cloud visibility by deploying Wazuh SIEM, integrating diverse data sources, and automating detection with custom rule sets.',
+    techStack: ['Wazuh', 'SIEM', 'ElasticSearch', 'Automation'],
     category: 'Network'
   }
 ];
@@ -55,37 +86,27 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: '1',
-    role: 'Senior Security Engineer',
-    company: 'Cyberdyne Systems',
-    period: '2021 - Present',
+    role: 'Security Engineer',
+    company: 'Bazaar Technologies',
+    period: 'June 2024 - Present',
     description: [
-      'Led the transition to a Zero Trust architecture, reducing attack surface by 40%.',
-      'Managed a team of 3 junior pentesters during quarterly red team engagements.',
-      'Implemented automated security scanning in GitHub Actions pipelines.'
+      'Reduced critical security vulnerabilities by 40% in Java/Kotlin microservices APIs through hands-on code reviews.',
+      'Conducted threat modeling and secure architecture reviews for critical financial integrations.',
+      'Managed AWS WAF to protect web apps from OWASP Top 10 vulnerabilities.',
+      'Reduced excessive IAM permissions by 40% by redesigning roles and enforcing least privilege.'
     ],
-    skills: ['AWS', 'Kubernetes', 'Python', 'Terraform']
+    skills: ['AWS WAF', 'Burp Suite', 'MOBSF', 'Java/Kotlin']
   },
   {
     id: '2',
-    role: 'Security Analyst',
-    company: 'Global Corp Bank',
-    period: '2018 - 2021',
+    role: 'B.S. Computer Science',
+    company: 'Mohammad Ali Jinnah University',
+    period: '2020 - 2024',
     description: [
-      'Monitored SIEM for potential breaches and conducted incident response.',
-      'Performed vulnerability assessments on internal web applications.',
-      'Co-authored the company-wide password policy and MFA rollout.'
+      'Graduated with Dean’s Honors (Faculty of Computing - 2023).',
+      'Achieved 5th position in Ignite Hackathon 2023.',
+      'Specialized in Security Engineering and Cloud Infrastructure.'
     ],
-    skills: ['Splunk', 'Burp Suite', 'Nessus', 'Linux']
-  },
-  {
-    id: '3',
-    role: 'Junior SysAdmin',
-    company: 'TechStart Inc.',
-    period: '2016 - 2018',
-    description: [
-      'Managed Linux server fleets and hardened OS configurations.',
-      'Scripted daily backups and automated patch management.',
-    ],
-    skills: ['Bash', 'Linux', 'Networking', 'Firewalls']
+    skills: ['Computer Science', 'Research', 'Leadership']
   }
 ];

@@ -3,6 +3,7 @@ import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
+import { Services } from './components/Services';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { TerminalBot } from './components/TerminalBot';
@@ -15,7 +16,7 @@ const App: React.FC = () => {
   // Simple scroll spy to update active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'services', 'terminal', 'experience', 'projects', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -59,6 +60,10 @@ const App: React.FC = () => {
 
         <section id="skills" className="scroll-mt-24">
           <Skills />
+        </section>
+
+        <section id="services" className="scroll-mt-24">
+          <Services />
         </section>
 
         <section id="terminal" className="scroll-mt-24">
